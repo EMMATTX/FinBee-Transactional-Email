@@ -26,11 +26,12 @@
             table, td{mso-table-lspace: 0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
             img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
         </style>
+
         <style>
             *{
                 margin: 0;
                 padding: 0;
-                box-sizing: border-box;
+                box-sizing: border-box !important;
 
             }
             body{
@@ -47,24 +48,84 @@
             }
 
             a{ 
-                text-decoration: none;
+                text-decoration: none !important;
 
             }
 
             .wrapper{
                 width: 100%;
                 table-layout: fixed;
-                background-color: #cccccc;
-                padding-bottom: 40px;
+                background-color: #cccccc !important;
+                padding-bottom: 40px !important;
 
             }
 
             .main{
                 width: 100%;
-                max-width: 600px;
-                background-color: #ffffff;
+                max-width: 600px !important;
+                background-color: #ffffff !important;
                 color: #000000;
-               /* border: #808080 2px solid !important;*/
+               border: #cccccc 3px solid !important;
+            }
+
+            @media screen and (max-width: 450px){
+
+                table[class="main"]{
+                    width: 100% !important;
+                }
+
+                table[class="header"]{
+                    text-align: center !important;
+                    font-size: 0  !important;
+
+                }
+
+                /*text styling*/
+                h1,h2,h3,p,span,a{
+                 font-size: 100% !important;
+                }
+
+                
+                .header .column{
+                    width: 100%;
+                    max-width: 100% !important;
+                    display: inline-block !important;
+                    vertical-align: top !important;
+                    text-align: center;
+                    padding: 10px 0 0 !important;
+	            }
+
+                td[class="header-padding"]{
+                    padding: 0 0 10px !important;
+                }
+                
+
+                img[class="img-max"]{
+
+                    max-width: 100% !important;
+                    height: auto !important;
+                }
+                table[class="head"]{
+                    text-align: center !important;
+                }
+                .head .column{
+                    text-align: center !important;
+                    width: 100%;
+                    max-width: 100% !important;
+                    display: inline-block !important;
+                    vertical-align: top !important;
+                    padding-top: 15px !important;
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
+
+                .unsubcribe{
+                    text-align: center;
+                }
+
+
+                
+
             }
         </style>
     </head>
@@ -73,17 +134,17 @@
 
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="main">
                 <tr>
-                    <td style="background-color:#b8860b" height="90">
-                        <table width="600" align="center" role="presentation" cellpadding="0" cellspacing="6" border="0" style="padding: 0 15px;">
+                    <td style="background-color:#b8860b !important; padding: 0 15px !important;" height="90" class="header-padding">
+                        <table width="100%" align="center" role="presentation" cellpadding="0" cellspacing="6" border="0" class="header">
                             <tr>
-                                <td align="left">
-                                    <a style="text-decoration:none; color: #ffffff;" href="#">
-                                        <h1 style="font-size: 30px; font-weight: bolder; font-style: italic; padding-left: 10px;">FinBee</h1>
+                                <td align="left" class="column">
+                                    <a style="text-decoration:none !important; color: #ffffff !important;" href="#">
+                                        <h1 style="font-size: 30px !important; font-weight: bolder !important; font-style: italic !important; padding-left: 10px !important;">FinBee</h1>
                                     </a>
                                 </td>
 
-                                <td align="right" style="color:#ffffff; font-size: 14px; font-weight: bold; padding-right: 10px;">
-                                    <span>Deposit</span>&nbsp;|&nbsp;<span>Withdraw</span>&nbsp;|&nbsp;<span>Transfer</span> <i class="uil uil-receipt-alt" style="font-size: 20px;"></i>
+                                <td align="right" style="color:#ffffff; font-size: 14px; font-weight: bold; padding-right: 10px;" class="column padding">
+                                    <span>Deposit</span>&nbsp;|&nbsp;<span>Withdraw</span>&nbsp;|&nbsp;<span>Transfer</span> <svg style="width: 20px !important; vertical-align:middle !important;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#ffffff" d="M10,8h6a1,1,0,0,0,0-2H10a1,1,0,0,0,0,2ZM8,12h8a1,1,0,0,0,0-2H8a1,1,0,0,0,0,2Zm0,4h8a1,1,0,0,0,0-2H8a1,1,0,0,0,0,2ZM20,2H4A1,1,0,0,0,3,3V21a1,1,0,0,0,1.6.8l2.07-1.55L8.73,21.8a1,1,0,0,0,1.2,0L12,20.25l2.07,1.55a1,1,0,0,0,1.2,0l2.06-1.55L19.4,21.8a1,1,0,0,0,1.05.09A1,1,0,0,0,21,21V3A1,1,0,0,0,20,2ZM19,19l-1.07-.8a1,1,0,0,0-1.2,0l-2.06,1.55L12.6,18.2a1,1,0,0,0-1.2,0L9.33,19.75,7.27,18.2a1,1,0,0,0-1.2,0L5,19V4H19Z"/></svg>
                                 </td>
                             </tr>
                         </table>
@@ -92,12 +153,12 @@
 
                 <tr>
                     <td style="background-color:#ffffff;">
-                        <table width="600" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0">
+                        <table width="100%" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0">
 
                             <!--successful transactrion illustrator image-->
-                            <tr align="center">
-                                <td>
-                                    <img src="https://s3.amazonaws.com/cdnl.iconscout.com/lottie/free/preview/3485740.gif?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4VMJAKC54WWWCYMY%2F20220518%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220518T222213Z&X-Amz-SignedHeaders=host&X-Amz-Expires=178667&X-Amz-Signature=3e2a7662a24bc312ad4b772b4bde7ee2e2348939854c53c598d4eb05177c0496" alt="transaction Successful" width="600">
+                            <tr>
+                                <td align="center" style="padding-top: 15px !important;">
+                                    <svg width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.72,8.79l-4.29,4.3L8.78,11.44a1,1,0,1,0-1.41,1.41l2.35,2.36a1,1,0,0,0,.71.29,1,1,0,0,0,.7-.29l5-5a1,1,0,0,0,0-1.42A1,1,0,0,0,14.72,8.79ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" fill="#d8a353" class="color000000 svgShape"></path></svg> 
 
                                 </td>
                             </tr>
@@ -105,17 +166,17 @@
                             <!--appreciation for transacting using the platform/software-->
                             <tr>
                                 <td align="center">
-                                    <table width="540" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="padding: 15px 0;">
+                                    <table width="90%" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="padding: 15px 0 !important;">
 
                                         <tr>
-                                            <td align="center" style="padding: 10px 0 15px; font-weight: bold;">
+                                            <td align="center" style="padding: 10px 0 15px !important; font-weight: bold !important;">
                                                 <h1>Successful transaction!</h1>
                                             </td>
                                         </tr>
             
                                         <tr>
-                                            <td align="left" style="padding: 10px 0;">
-                                                <p style="color: #6b6a6a;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis expedita id he sid tempore magni ad nobis!</p>
+                                            <td align="left" style="padding: 10px 0 !important;">
+                                                <p style="color: #6b6a6a !important;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis expedita id he sid tempore magni ad nobis!</p>
                                             </td>
                                         </tr>
 
@@ -128,83 +189,85 @@
                         </table>
 
                         <!--transaction receipt-->
-                        <table width="600" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0">
+                        <table width="100%" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0">
                             <tr>
                                 <td align="center">
-                                    <table width="540" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="background-color: #eae9e9; vertical-align: middle; padding: 2px 5px; font-weight: bold;" >
+                                
+                                    <table width="90%" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="background-color: #eae9e9 !important; vertical-align: middle !important; padding: 2px 5px !important; font-weight: bold !important;">
                                         <tr>
-                                            <td width="329.97">
-                                                <h3>Transaction Confirmation #</h3>
+                                            <td width="63%">
+                                                <span>Transaction Confirmation</span>
                                             </td>
 
                                             <td>
-                                                <span>2234324</span>
+                                                <span>#2234324</span>
                                             </td>
                                         </tr>
                                     </table>
 
-                                    <table width="540" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="color: #6b6a6a;  padding: 0 5px;">
+                                    <table width="90%" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="color: #6b6a6a !important;  padding: 0 5px !important;">
+
                                         <tr>
-                                            <td style="padding: 8px 0 0;">
+                                            <td style="padding: 8px 0 0 !important">
                                                 <span>withdrawal</span>
                                             </td>
 
-                                            <td style="padding: 8px 0 0;">
+                                            <td style="padding: 8px 0 0 !important">
                                                 <span>$2000.00</span>
                                             </td>
                                         </tr>
 
                                         <tr>
-                                            <td style="padding: 5px 0 0;">
+                                            <td style="padding: 5px 0 0 !important;">
                                                 <span>Transaction fee</span>
                                             </td>
 
-                                            <td style="padding: 5px 0 0;">
+                                            <td style="padding: 5px 0 0 !important;">
                                                 <span>$20.00</span>
                                             </td>
                                         </tr>
 
                                         <tr>
-                                            <td style="padding: 5px 0 0;">
+                                            <td style="padding: 5px 0 0 !important;">
                                                 <span>VAT</span>
                                             </td>
 
-                                            <td style="padding: 5px 0 0;">
+                                            <td style="padding: 5px 0 0 !important;">
                                                 <span>$2.00</span>
                                             </td>
                                         </tr>
 
                                     </table>
 
-                                    <table width="540" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="padding: 15px 0 0;">
+                                    <table width="90%" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="padding: 15px 0 0 !important;">
                                         <tr>
                                             <td >
-                                                <hr height="6" style="color: #eae9e9;">
+                                                <hr height="6" style="color: #eae9e9 !important;">
                                             </td>
                                         </tr>
                                     </table>
 
-                                    <table width="540" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="padding: 5px 0;">
+                                    <table width="90%" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="padding: 5px 0 !important;">
                                         
                                         
 
                                         <tr>
-                                            <td width="329.97">
+                                            <td style="padding: 0 0 0 5px !important;">
                                                 <h3>TOTAL</h3>
                                             </td>
 
-                                            <td>
+                                            <td align="center">
                                                 <span>$2022.00</span>
                                             </td>
                                         </tr>
 
                                     </table>
 
-                                    <table width="540" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="padding: 0px 0 0;">
+                                    <table width="90%" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" style="padding: 0px 0 0 !important;">
 
                                         <tr>
                                             <td >
-                                                <hr height="6" style="color: #eae9e9;">
+                                                <hr height="6" style="color: #eae9e9 !important;">
                                             </td>
                                         </tr>
 
@@ -220,17 +283,17 @@
 
                 <!--transaction details-->
                 <tr>
-                    <td align="center" style="padding: 20px 0 40px;">
-                        <table  width="540" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0">
+                    <td align="center" style="padding: 20px 0 40px !important;">
+                        <table  width="90%" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0" class="head ">
                             <tr>
-                                <td width="45%" style="vertical-align: top; padding: 0 10px 0 0; ">
+                                <td width="50%" class="column" style="vertical-align: top !important; padding: 0 0px 0 0 !important; ">
                                     <h3 style="padding: 2px 0 5px;">Transaction History</h3>
                                     <p style="color: #6b6a6a; padding: 5px 0; line-height: 25px;">Withdrawal account: 22103399347<br>Name: John Dave<br>Bank: Unity Bank<br>Address: street 123, ST 50667</p>
                                 </td>
 
-                                <td width="45%" style="vertical-align: top;padding: 0 0 0 30px; ">
-                                    <h3 style="padding: 2px 0 5px;">Transaction Date</h3>
-                                    <p style="color: #6b6a6a; padding: 5px 0; line-height: 25px;">Time: 13:37:14 GMT +1<br>Date: 22-05-2021</p>
+                                <td width="45%" class="column" style="vertical-align: top !important;padding: 0 0 0 0px !important; ">
+                                    <h3 style="padding: 2px 0 5px !important;">Transaction Date</h3>
+                                    <p style="color: #6b6a6a !important; padding: 5px 0 !important; line-height: 25px !important;">Time: 13:37:14 GMT +1<br>Date: 22-05-2021</p>
                                 </td>
 
                             </tr>
@@ -242,13 +305,13 @@
                 <tr>
                     <td align="center">
 
-                        <table width="600" align="center" role="presentation" cellpadding="0" cellspacing="0" border="0" style="background-color: #e4ac1c; color: #ffffff;">
+                        <table width="100%" align="center" role="presentation" cellpadding="0" cellspacing="0" border="0" style="background-color: #e4ac1c !important; color: #ffffff !important;">
                             <tr>
                                 <td align="center" style="padding: 30px 0 60px;">
 
                                     <h2 style="padding: 20px 0 45px;">Get 25% off your next transaction.</h2>
 
-                                    <a href="#" style="text-decoration: none; font-size: 19px; font-weight: 900; background-color: #ffffff68; color: #ffffff; padding: 15px 30px; border-top-left-radius: 10px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 10px;">Yes, sure!</a>
+                                    <a href="#" style="text-decoration: none; font-size: 19px; font-weight: 900; background-color: #ffffff68 !important; color: #ffffff !important; padding: 15px 30px !important; border-top-left-radius: 10px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 10px;">Yes, sure!</a>
 
 
                                 </td>
@@ -261,23 +324,23 @@
                 </tr>
 
                 <tr>
-                    <td align="center" style="background-color:#ffffff; padding: 15px 0 30px;">
+                    <td align="center" style="background-color:#ffffff; padding: 15px 0 30px !important;">
 
-                        <table width="540" align="center" role="presentation" cellpadding="0" cellspacing="0" border="0">
+                        <table width="90%" align="center" role="presentation" cellpadding="0" cellspacing="0" border="0">
                             <tr>
-                                <td align="center" style="padding: 30px 0 40px;">
+                                <td align="center" style="padding: 30px 0 40px !important;">
 
-                                    <span style="font-size:30px; font-weight:bolder; color: #ffffff; background-color: #b8860b; padding: 8px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">FB</span>
+                                    <span style="font-size:30px !important; font-weight:bolder !important; color: #ffffff !important; background-color: #b8860b !important; padding: 8px !important; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">FB</span>
                                     
-                                    <p style="padding: 20px 0; font-weight: bold; line-height: 25px;">243 Waterloo Avenue<br>2nd floor, London ST 901154</p>
+                                    <p style="padding: 20px 0 !important; font-weight: bold !important; line-height: 25px !important;">243 Waterloo Avenue<br>2nd floor, London ST 901154</p>
 
                                 </td>
                             </tr>
 
                             <tr>
-                                <td align="left">
+                                <td align="left" class="unsubcribe">
 
-                                    <p style="line-height: 25px; color: #6b6a6a;">If you didn't create an account using this email address please ignore this email or <span><a href="#" style="color: #6b6a6a; text-decoration: underline;">Unsubcribe.</a></span></p>
+                                    <p style="line-height: 25px !important; color: #6b6a6a !important;">If you didn't create an account using this email address please ignore this email or <span><a href="#" style="color: #6b6a6a; text-decoration: underline !important;">Unsubcribe.</a></span></p>
                                 </td>
                             </tr>
 
@@ -287,10 +350,10 @@
 
             </table>
 
-            <table width="600" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0">
+            <table width="100%" align="center" role="presentation" cellpadding="0" cellspacing="4" border="0">
                 <tr>
-                    <td align="center" style="padding: 20px 0; color: #6b6a6a;">
-                        <span>&copy;2018-2021 FinBee Inc. All rights reserved. coded by <a style="color: #6b6a6a; text-decoration: underline;" href="https://github.com/EMMATTX">Emmanuel Chukwuka</a></span>
+                    <td align="center" style="padding: 20px 0 !important; color: #6b6a6a !important;">
+                        <span>&copy;2018-2021 FinBee Inc. All rights reserved. coded by <a style="color: #6b6a6a !important; text-decoration: underline !important;" href="https://github.com/EMMATTX">Emmanuel Chukwuka</a></span>
                     </td>
                 </tr>
             </table>
